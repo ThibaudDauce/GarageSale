@@ -12,6 +12,7 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected $commands = [
 		'GarageSale\Console\Commands\Inspire',
+		'GarageSale\Console\Commands\InitializeGarageSale',
 	];
 
 	/**

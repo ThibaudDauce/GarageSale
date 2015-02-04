@@ -1,5 +1,7 @@
 <?php namespace GarageSale\Providers;
 
+use GarageSale\Repositories\EloquentGarageSaleRepository;
+use GarageSale\Repositories\GarageSaleRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
@@ -28,6 +30,11 @@ class AppServiceProvider extends ServiceProvider {
 		$this->app->bind(
 			'Illuminate\Contracts\Auth\Registrar',
 			'GarageSale\Services\Registrar'
+		);
+
+		$this->app->bind(
+			GarageSaleRepository::class,
+			EloquentGarageSaleRepository::class
 		);
 	}
 
