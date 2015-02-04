@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: GarageSale
+        psr4_prefix: GarageSale
+        src_path: app
